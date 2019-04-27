@@ -97,7 +97,8 @@ void K25()
 {}
 void R1()       //第一行键盘操作
 {
-  if(row[0]==1 && first[0]==0) K1();
+  if(row[0]==1 && first[0]==0) {K1();first[0]=1;}
+  if(row[0]==0) first[0]=0;
   if(row[1]==1 && first[2]==0) K2();
   if(row[3]==1 && first[3]==0) K4();
   if(row[4]==1 && first[4]==0) K5();
