@@ -14,18 +14,17 @@
 #define OFF 2
 #define SAI 3//键盘模式定义
 
-#define X1 8
-#define X2 7
-#define X3 6
-#define X4 5
-#define X5 4//横行定义，读取时低电平
+#define Y1 8
+#define Y2 7
+#define Y3 6
+#define Y4 5
+#define Y5 4//纵行定义，全部上拉读取 
 
-#define Y1 9
-#define Y2 10
-#define Y3 16
-#define Y4 14
-#define Y5 15//纵行定义，全部上拉读取 
-
+#define X1 9
+#define X2 10
+#define X3 16
+#define X4 14
+#define X5 15//横行定义，读取时低电平
 int mod;//键盘模式变量
 
 bool key[5][5]={0}; //存储键盘当前状态用的数组
@@ -40,7 +39,7 @@ void wheel(bool direct)  //用于模拟鼠标滚轮的函数
   HID().SendReport(1,m,4);
 }
 
-void high()
+void high()    //拉高所有按键
 {
   digitalWrite(X1,HIGH);
   digitalWrite(X2,HIGH);
@@ -49,7 +48,7 @@ void high()
   digitalWrite(X5,HIGH);
 }
 
-void setup()
+void setup()   //不就是初始化吗
 {
   pinMode(X1,OUTPUT);
   pinMode(X2,OUTPUT);
@@ -67,8 +66,46 @@ void setup()
   pinMode(CLK,INPUT);
   pinMode(DT,INPUT);
   attachInterrupt(2,ClockChanged,CHANGE);//旋转编码器初始化,中断函数ClockChanged
-  
+  high();
   Serial.begin(9600);
+}
+
+void scan()   //我来扫描键盘
+{
+    digitalWrite(X1,LOW);
+    key[0][0]=digitalRead(Y1);
+    key[0][1]=digitalRead(Y2);
+    key[0][2]=digitalRead(Y3);
+    key[0][3]=digitalRead(Y4);
+    key[0][4]=digitalRead(Y5);
+    high();
+    digitalWrite(X2,LOW);
+    key[1][0]=digitalRead(Y1);
+    key[1][1]=digitalRead(Y2);
+    key[1][2]=digitalRead(Y3);
+    key[1][3]=digitalRead(Y4);
+    key[1][4]=digitalRead(Y5);
+    high();
+    digitalWrite(X3,LOW);
+    key[2][0]=digitalRead(Y1);
+    key[2][1]=digitalRead(Y2);
+    key[2][2]=digitalRead(Y3);
+    key[2][3]=digitalRead(Y4);
+    key[2][4]=digitalRead(Y5);
+    high();
+    digitalWrite(X4,LOW);
+    key[3][0]=digitalRead(Y1);
+    key[3][1]=digitalRead(Y2);
+    key[3][2]=digitalRead(Y3);
+    key[3][3]=digitalRead(Y4);
+    key[3][4]=digitalRead(Y5);
+    high();
+    digitalWrite(X5,LOW);
+    key[4][0]=digitalRead(Y1);
+    key[4][1]=digitalRead(Y2);
+    key[4][2]=digitalRead(Y3);
+    key[4][3]=digitalRead(Y4);
+    key[4][4]=digitalRead(Y5);
 }
 
 void ClockChanged()  //旋转编码器处理函数
@@ -82,8 +119,6 @@ void ClockChanged()  //旋转编码器处理函数
   int clkv_ = digitalRead(CLK);
   int dtv_ = digitalRead(DT);
   if(  clkv!=clkv_  ||  dtv!=dtv_  ) return 0;
-
-  delay(5);
   if (lastCLK != clkv)
   {
     lastCLK = clkv;
@@ -93,17 +128,7 @@ void ClockChanged()  //旋转编码器处理函数
       tra=false;
   }
   sw=digitalRead(SW);
-  switch(mod)
-  {
-    case PS:
-      if(tra);
-    case PR:
-      if(tra);
-    case OFF:
-      if(tra);
-    case SAI:
-      if(tra);
-  }
+  wheel(!tra);
 }
 
 void mode() //获取键盘模式
@@ -117,16 +142,68 @@ void mode() //获取键盘模式
   if( !(mk1) && !(mk2) ) mod=SAI;
 }
 
+void runnaX1()
+{
+  if(key[0][0] && key[0][0]!=key_[0][0])
+  {
+    switch(mod)
+    {
+     case PS:
+       Keyboard.print("a");
+       break;
+     case PR:
+       Keyboard.print("b");
+       break;
+     case OFF:
+       Keyboard.print("c");
+       break;
+     case SAI:
+       Keyboard.print("d");
+       break;
+   }
+  }
+  ;
+}
+void runnaX2()
+{
+  ;
+}
+void runnaX3()
+{
+  ;
+}
+void runnaX4()
+{
+  ;
+}
+void runnaX5()
+{
+  ;
+}
+
 void loop()
 {
-  bool swm;
+  int check_row;
   mode();
-  /*if (!digitalRead(SW)) //扫描旋转编码器按键
+  scan();
+  for(check_row=0;check_row<25;check_row++)
   {
-    delay(10);
-    swm=digitalRead(SW);
-    if (swm==0)
-      {Serial.print("press");}
-  }*/
+    *(key[0]+check_row)=!*(key[0]+check_row);
+  }
+  for(check_row=0;check_row<25;check_row++)
+  {
+//   Serial.print(*(key[0]+check_row));
+//    Serial.print(*(key_[0]+check_row));
+//    Serial.print(" ");
+  }
+//  delay(1000);
+  Serial.println();
+  runnaX1();
+  runnaX2();
+  runnaX3();
+  runnaX4();
+  runnaX5();
+  for(check_row=0;check_row<25;check_row++)
+      *(key_[0]+check_row)=*(key[0]+check_row);
 }
  
