@@ -238,42 +238,22 @@ void runnaX1()  //key1～key5功能设置
   }
   if(key[0][4] && key[0][4]!=key_[0][4])
   {
-    switch(mod)
-    {
-     case PS:
-       Keyboard.print("a");
-       break;
-     case PR:
-       Keyboard.print("b");
-       break;
-     case OFF:
-       Keyboard.print("c");
-       break;
-     case SAI:
-       Keyboard.print("d");
-       break;
-   }
+      Keyboard.press(KEY_RIGHT_CTRL);
+      delayMicroseconds(25);
+      Keyboard.print('c');
+      delayMicroseconds(25);
+      Keyboard.release(KEY_RIGHT_CTRL);
   }
 }
 void runnaX2()  //key6～key10功能设置
 {
   if(key[1][0] && key[1][0]!=key_[1][0])
   {
-    switch(mod)
-    {
-     case PS:
-       Keyboard.print("a");
-       break;
-     case PR:
-       Keyboard.print("b");
-       break;
-     case OFF:
-       Keyboard.print("c");
-       break;
-     case SAI:
-       Keyboard.print("d");
-       break;
-   }
+      Keyboard.press(KEY_RIGHT_CTRL);
+      delayMicroseconds(25);
+      Keyboard.print('v');
+      delayMicroseconds(25);
+      Keyboard.release(KEY_RIGHT_CTRL);
   }
   if(key[1][1] && key[1][1]!=key_[1][1])
   {
@@ -352,21 +332,11 @@ void runnaX3()  //key11～key15功能设置
 {
   if(key[2][0] && key[2][0]!=key_[2][0])
   {
-    switch(mod)
-    {
-     case PS:
-       Keyboard.print("a");
-       break;
-     case PR:
-       Keyboard.print("b");
-       break;
-     case OFF:
-       Keyboard.print("c");
-       break;
-     case SAI:
-       Keyboard.print("d");
-       break;
-   }
+      Keyboard.press(KEY_RIGHT_CTRL);
+      delayMicroseconds(25);
+      Keyboard.print('x');
+      delayMicroseconds(25);
+      Keyboard.release(KEY_RIGHT_CTRL);
   }
   if(key[2][1] && key[2][1]!=key_[2][1])
   {
@@ -443,41 +413,32 @@ void runnaX3()  //key11～key15功能设置
 }
 void runnaX4()  //key16～key20功能设置
 {
-  if(key[3][0] && key[3][0]!=key_[3][0])
+  if(key[3][0] && key[3][0]!=key_[3][0])    //Key16保存
   {
-    switch(mod)
-    {
-     case PS:
-       Keyboard.print("a");
-       break;
-     case PR:
-       Keyboard.print("b");
-       break;
-     case OFF:
-       Keyboard.print("c");
-       break;
-     case SAI:
-       Keyboard.print("d");
-       break;
-   }
+      Keyboard.press(KEY_RIGHT_CTRL);
+      delayMicroseconds(25);
+      Keyboard.print('s');
+      delayMicroseconds(25);
+      Keyboard.release(KEY_RIGHT_CTRL);
   }
-  if(key[3][1] && key[3][1]!=key_[3][1])
+  if(key[3][1] && key[3][1]!=key_[3][1])    //Key17另存为
   {
-    switch(mod)
+    if(mod==OFF)
     {
-     case PS:
-       Keyboard.print("a");
-       break;
-     case PR:
-       Keyboard.print("b");
-       break;
-     case OFF:
-       Keyboard.print("c");
-       break;
-     case SAI:
-       Keyboard.print("d");
-       break;
-   }
+      Keyboard.press(KEY_F12);
+      delayMicroseconds(25);
+      Keyboard.release(KEY_F12);
+    }
+    else
+    {
+      Keyboard.press(KEY_RIGHT_CTRL);
+      Keyboard.press(KEY_RIGHT_ALT);
+      delayMicroseconds(25);
+      Keyboard.print('s');
+      delayMicroseconds(25);
+      Keyboard.release(KEY_RIGHT_CTRL);
+      Keyboard.release(KEY_RIGHT_ALT);
+    }
   }
   if(key[3][2] && key[3][2]!=key_[3][2])
   {
