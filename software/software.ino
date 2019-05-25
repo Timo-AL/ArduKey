@@ -175,7 +175,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("s");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("n");
        break;
      case SAI:
        Keyboard.print("d");
@@ -193,7 +193,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("f");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("f");
        break;
      case SAI:
        Keyboard.print("d");
@@ -211,7 +211,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("v");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("a");
        break;
      case SAI:
        Keyboard.print("d");
@@ -229,7 +229,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("c");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("b");
        break;
      case SAI:
        Keyboard.print("d");
@@ -266,7 +266,10 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.print("\\");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.print("z");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case SAI:
        Keyboard.print("d");
@@ -287,7 +290,10 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.print("i");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case SAI:
        Keyboard.print("d");
@@ -310,7 +316,10 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_ALT);
+       Keyboard.print("i");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_ALT);
        break;
      case SAI:
        Keyboard.print("d");
@@ -328,7 +337,7 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.print("i");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("i");
        break;
      case SAI:
        Keyboard.print("d");
@@ -362,7 +371,10 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_ALT);
+       Keyboard.print("x");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_ALT);
        break;
      case SAI:
        Keyboard.print("d");
@@ -383,7 +395,10 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.print("o");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case SAI:
        Keyboard.print("d");
@@ -406,7 +421,10 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_ALT);
+       Keyboard.print("o");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_ALT);
        break;
      case SAI:
        Keyboard.print("d");
@@ -424,7 +442,7 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.print("o");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("o");
        break;
      case SAI:
        Keyboard.print("d");
@@ -463,7 +481,10 @@ void runnaX4()  //key16～key20功能设置
        Keyboard.print("=");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("=");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case SAI:
        Keyboard.print("d");
@@ -481,7 +502,10 @@ void runnaX4()  //key16～key20功能设置
        Keyboard.print("-");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("-");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case SAI:
        Keyboard.print("d");
@@ -499,7 +523,7 @@ void runnaX4()  //key16～key20功能设置
        Keyboard.print("j");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print("j");
        break;
      case SAI:
        Keyboard.print("d");
@@ -520,7 +544,7 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.print(" ");
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.print(" ");
        break;
      case SAI:
        Keyboard.print("d");
@@ -559,7 +583,12 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("r");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case SAI:
        Keyboard.print("d");
@@ -580,7 +609,10 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("z");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case SAI:
        Keyboard.print("d");
@@ -602,7 +634,9 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.release(KEY_DELETE);
        break;
      case DAV:
-       Keyboard.print("c");
+       Keyboard.press(KEY_DELETE);
+       delayMicroseconds(50);
+       Keyboard.release(KEY_DELETE);
        break;
      case SAI:
        Keyboard.print("d");
