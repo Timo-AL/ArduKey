@@ -178,7 +178,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("n");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("t");
        break;
    }
   }
@@ -196,7 +196,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("f");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("g");
        break;
    }
   }
@@ -214,7 +214,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("a");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("e");
        break;
    }
   }
@@ -232,7 +232,7 @@ void runnaX1()  //key1～key5功能设置
        Keyboard.print("b");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("v");
        break;
    }
   }
@@ -271,9 +271,6 @@ void runnaX2()  //key6～key10功能设置
        delayMicroseconds(50);
        Keyboard.release(KEY_LEFT_SHIFT);
        break;
-     case SAI:
-       Keyboard.print("d");
-       break;
    }
   }
   if(key[1][2] && key[1][2]!=key_[1][2])     //key8
@@ -301,7 +298,7 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("l");
        break;
    }
   }
@@ -327,7 +324,7 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.release(KEY_LEFT_ALT);
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("m");
        break;
    }
   }
@@ -345,7 +342,7 @@ void runnaX2()  //key6～key10功能设置
        Keyboard.print("i");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("x");
        break;
    }
   }
@@ -382,7 +379,7 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.release(KEY_LEFT_ALT);
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("s");
        break;
    }
   }
@@ -409,7 +406,10 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("t");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
    }
   }
@@ -439,9 +439,6 @@ void runnaX3()  //key11～key15功能设置
        delayMicroseconds(50);
        Keyboard.release(KEY_LEFT_ALT);
        break;
-     case SAI:
-       Keyboard.print("d");
-       break;
    }
   }
   if(key[2][4] && key[2][4]!=key_[2][4])     //key15
@@ -465,7 +462,12 @@ void runnaX3()  //key11～key15功能设置
        Keyboard.print("o");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("n");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
    }
   }
@@ -511,9 +513,6 @@ void runnaX4()  //key16～key20功能设置
        delayMicroseconds(50);
        Keyboard.release(KEY_LEFT_CTRL);
        break;
-     case SAI:
-       Keyboard.print("d");
-       break;
    }
   }
   if(key[3][3] && key[3][3]!=key_[3][3])    //key19
@@ -539,9 +538,6 @@ void runnaX4()  //key16～key20功能设置
        delayMicroseconds(50);
        Keyboard.release(KEY_LEFT_CTRL);
        break;
-     case SAI:
-       Keyboard.print("d");
-       break;
    }
   }
   if(key[3][4] && key[3][4]!=key_[3][4])    //key20
@@ -561,7 +557,10 @@ void runnaX4()  //key16～key20功能设置
        Keyboard.print("j");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("=");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
    }
   }
@@ -585,7 +584,10 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.print(" ");
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("-");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
    }
   }
@@ -632,7 +634,10 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case SAI:
+       Keyboard.press(KEY_LEFT_CTRL);
        Keyboard.print("d");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
    }
   }
@@ -661,7 +666,12 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.release(KEY_LEFT_CTRL);
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("i");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
    }
   }
@@ -685,7 +695,7 @@ void runnaX5()  //key21～key25功能设置
        Keyboard.release(KEY_DELETE);
        break;
      case SAI:
-       Keyboard.print("d");
+       Keyboard.print("y");
        break;
    }
   }
