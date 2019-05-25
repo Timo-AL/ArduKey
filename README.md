@@ -16,7 +16,8 @@ hardware data can be inport to EasyEDA
 SW1为模式切换，拨杆在右为图片模式，拨杆在左为视频模式  
 SW2为软件切换，图片模式下拨杆在右适配Photoshop，在左适配Easy Paint Tool SAI；视频模式下拨杆在右适配Davinch Resolve，在左适配Premiere  
 ***
-按键功能表  
+按键功能表 
+ 
 |按键号|视频模式功能|图片模式功能|
 |----|----|----|
 |1|开关时间线吸附|文字工具|
