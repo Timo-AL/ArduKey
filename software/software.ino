@@ -613,7 +613,7 @@ void runnaX5()  //key21～key25功能设置
     {
      case PS:
        Keyboard.press(KEY_LEFT_CTRL);
-       Keyboard.print("n");
+       Keyboard.print("d");
        delayMicroseconds(50);
        Keyboard.release(KEY_LEFT_CTRL);
        break;
