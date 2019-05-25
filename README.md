@@ -20,6 +20,7 @@ SW1为模式切换，拨杆在右为图片模式，拨杆在左为视频模式
 SW2为软件切换，图片模式下拨杆在右适配Photoshop，在左适配Easy Paint Tool SAI；视频模式下拨杆在右适配Davinch Resolve，在左适配Premiere  
 
 ||SW1左|SW1右|
+|----|----|----|
 |SW2左|Premiere|Easy Paint Tool SAI|
 |SW2右|Davinch Resolve|Premiere|
 ***
