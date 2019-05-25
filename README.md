@@ -1,3 +1,6 @@
+樱桃版尚未开工，功能会比欧姆龙版丰富
+this branch has not began！
+***
 硬件部分设计可导入LCEDA使用  
 hardware data can be inport to EasyEDA  
 ****
