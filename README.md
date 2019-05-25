@@ -13,8 +13,15 @@ hardware data can be inport to EasyEDA
 |SAI2|反选|Ctrl+Shift+i|
 |SAI2|抓手|Y|
 ***
+转盘直接选择为键盘左右键，按下旋转为鼠标滚轮上下  
+转盘算法不成熟，旋转过快可导致键盘宕机，拔插即可解决（后续固件修复）
+***
 SW1为模式切换，拨杆在右为图片模式，拨杆在左为视频模式  
 SW2为软件切换，图片模式下拨杆在右适配Photoshop，在左适配Easy Paint Tool SAI；视频模式下拨杆在右适配Davinch Resolve，在左适配Premiere  
+
+||SW1左|SW1右|
+|SW2左|Premiere|Easy Paint Tool SAI|
+|SW2右|Davinch Resolve|Premiere|
 ***
 按键功能表 
  
@@ -36,3 +43,12 @@ SW2为软件切换，图片模式下拨杆在右适配Photoshop，在左适配Ea
 |14|清除出点|Adobe Camera Raw滤镜|SAI不适用|
 |15|设置出点|新建图层|SAI下为彩色图层|
 |16|保存|保存||
+|17|另存为|另存为||
+|18|放大时间线|液化滤镜|SAI不适用|
+|19|缩小时间线|盖印可见图层|SAI下不适用|
+|20|倒放|放大画面||
+|21|播放|缩小画面||
+|22|输出现在模式|输出现在模式||
+|23|更改片段速度|取消选区||
+|24|撤销操作|选择反向||
+|25|波纹删除|抓手工具||
