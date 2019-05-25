@@ -169,7 +169,7 @@ void runnaX1()  //key1～key5功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("t");
        break;
      case PR:
        Keyboard.print("s");
@@ -187,7 +187,7 @@ void runnaX1()  //key1～key5功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("i");
        break;
      case PR:
        Keyboard.print("f");
@@ -205,7 +205,7 @@ void runnaX1()  //key1～key5功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("e");
        break;
      case PR:
        Keyboard.print("v");
@@ -223,7 +223,7 @@ void runnaX1()  //key1～key5功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("b");
        break;
      case PR:
        Keyboard.print("c");
@@ -260,7 +260,7 @@ void runnaX2()  //key6～key10功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("j");
        break;
      case PR:
        Keyboard.print("\\");
@@ -281,7 +281,12 @@ void runnaX2()  //key6～key10功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_ALT);
+       Keyboard.print("s");
+       delayMicroseconds(25);
+       Keyboard.print("c");
+       delayMicroseconds(25);
+       Keyboard.release(KEY_LEFT_SHIFT);
        break;
      case PR:
        Keyboard.press(KEY_LEFT_SHIFT);
@@ -305,7 +310,7 @@ void runnaX2()  //key6～key10功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("m");
        break;
      case PR:
        Keyboard.press(KEY_LEFT_SHIFT);
@@ -331,7 +336,7 @@ void runnaX2()  //key6～key10功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("x");
        break;
      case PR:
        Keyboard.print("i");
@@ -360,7 +365,7 @@ void runnaX3()  //key11～key15功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("v");
        break;
      case PR:
        Keyboard.press(KEY_LEFT_SHIFT);
@@ -386,7 +391,10 @@ void runnaX3()  //key11～key15功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("t");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.press(KEY_LEFT_SHIFT);
@@ -410,7 +418,12 @@ void runnaX3()  //key11～key15功能设置
     switch(mod)
     {
      case PS:
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
        Keyboard.print("a");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.press(KEY_LEFT_SHIFT);
@@ -436,7 +449,14 @@ void runnaX3()  //key11～key15功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.press(KEY_LEFT_ALT);
+       Keyboard.print("n");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
+       Keyboard.press(KEY_LEFT_ALT);
        break;
      case PR:
        Keyboard.print("o");
@@ -475,7 +495,12 @@ void runnaX4()  //key16～key20功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("x");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.print("=");
@@ -496,7 +521,14 @@ void runnaX4()  //key16～key20功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.press(KEY_LEFT_ALT);
+       Keyboard.print("e");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
+       Keyboard.press(KEY_LEFT_ALT);
        break;
      case PR:
        Keyboard.print("-");
@@ -517,7 +549,10 @@ void runnaX4()  //key16～key20功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("=");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.print("j");
@@ -538,7 +573,10 @@ void runnaX5()  //key21～key25功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("-");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.print(" ");
@@ -574,7 +612,10 @@ void runnaX5()  //key21～key25功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("n");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.press(KEY_LEFT_CTRL);
@@ -600,7 +641,12 @@ void runnaX5()  //key21～key25功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.press(KEY_LEFT_SHIFT);
+       Keyboard.press(KEY_LEFT_CTRL);
+       Keyboard.print("i");
+       delayMicroseconds(50);
+       Keyboard.release(KEY_LEFT_SHIFT);
+       Keyboard.release(KEY_LEFT_CTRL);
        break;
      case PR:
        Keyboard.press(KEY_LEFT_CTRL);
@@ -624,7 +670,7 @@ void runnaX5()  //key21～key25功能设置
     switch(mod)
     {
      case PS:
-       Keyboard.print("a");
+       Keyboard.print("h");
        break;
      case PR:
        Keyboard.press(KEY_LEFT_SHIFT);
